@@ -3,20 +3,24 @@
     justify-content: start;
     margin: 50px auto;
     gap: 30px;
-    border: 2px solid rgb(211, 27, 27);
+    background-color: #27272a;
     width: 70%;
     padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(219, 203, 54, 0.99) 1.95px 1.95px 2.6px;
 }
 
 .cards div img{
     border: 2px solid black;
     height: 100px;
+    
     border-radius: 10%;
+    background-color: #27272a;
 }
 
 .descriptionCard{
-    border: 2px solid black;
     width: 70%;
+    background-color: #27272a;
 }
 
 .addAndRemove{
@@ -25,5 +29,12 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    background-color: #27272a;
+    /* border: 2px solid black; */
 }
+
+.descriptionCard h1, .descriptionCard p, .descriptionCard strong {
+    margin-bottom: 10px; 
+    background-color: #27272a;
+}
+

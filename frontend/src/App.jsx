@@ -9,6 +9,7 @@ function App() {
       <Header/>
       <ProductCard />
       <ProductCard />
+      <ProductCard />
     </div>
   )
 }
