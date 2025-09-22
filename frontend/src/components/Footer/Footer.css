@@ -1,0 +1,49 @@
+.CardPrincipal {
+    margin: 40px auto;
+    width: 73%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #27272a;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.headerPedido {
+    text-align: start;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.cestaPedido {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    padding: 20px;
+
+}
+
+.carrinhoPedido {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.finalizarPedido {
+    text-align: center;
+    
+}
+
+.finalizarPedido button {
+    background-color: #3f3f46;
+    color: #9ca3af;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: not-allowed;
+    width: 100%;
+}

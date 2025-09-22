@@ -22,5 +22,6 @@ export const product = [
         description: "Massa deliciosa sabor prestigio",
         price: "R$ 9,00",
         image: logo,
-    }
+    },
+    
 ];

@@ -30,7 +30,11 @@
     justify-content: center;
     align-items: center;
     background-color: #27272a;
+
     /* border: 2px solid black; */
+}
+.addAndRemove button{
+    cursor: pointer;
 }
 
 .descriptionCard h1, .descriptionCard p, .descriptionCard strong {
