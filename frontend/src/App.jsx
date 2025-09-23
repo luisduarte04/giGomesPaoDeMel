@@ -5,9 +5,11 @@ import Header from './components/Header/Header';
 import ProductCard from './components/CardProduct/ProductCard';
 import { product } from './data';
 import Footer from './components/Footer/Footer';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   const [cart, setCart] = useState([])
+  const [home, setHome] = useState(true)
   const addToCart = (product) => {
     setCart([...cart, product])
   }
@@ -23,7 +25,9 @@ function App() {
   return (
     <div className='app-container'>
       <Header />
-      {product.map((item) => (
+      {home ? (
+        <>
+        {product.map((item) => (
         <ProductCard 
         key={item.id} 
         name={item.name} 
@@ -35,7 +39,14 @@ function App() {
         
         />
       ))}
-      <Footer cart={cart}/>
+      <Footer cart={cart} onCheckout={() => setHome(false)}/>
+        </>
+      ): (
+        <>
+          <Checkout voltar={() => setHome(true)}/>
+        </>
+      )}
+      
     </div>
   );
 }

@@ -5,7 +5,7 @@
     justify-content: center;
     height: 15rem;
     align-items: center;
-    box-shadow: rgba(219, 203, 54, 0.99) 1.95px 1.95px 2.6px;
+    box-shadow: #FACC15 1.95px 1.95px 2.6px;
     
 }
 
@@ -26,9 +26,6 @@
     color: #fff;
 }
 
-.header div h1 span.paoDeMel{
-    color: rgb(255, 255, 0);
-}
 
 .header div p.description{
     color: gray;

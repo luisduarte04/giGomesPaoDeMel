@@ -11,7 +11,7 @@ export default function Header() {
             <strong>
             <h1>
               <span className="giGomes">GiGomes </span>
-              <span className="paoDeMel">Pão de Mel</span>
+              <span className="paoDeMel" style={{color: "#FACC15"}}>Pão de Mel</span>
             </h1>
             <p className="description">Produzido com amor em Embu das Artes - SP</p>
             </strong>

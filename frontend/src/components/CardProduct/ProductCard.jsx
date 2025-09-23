@@ -44,10 +44,10 @@ export default function ProductCard({name, description, price, image, addToCart,
           {quantidade}
         </p>
         <button
-          style={{ borderRadius: "100%", padding: "10px", backgroundColor: "yellow" }}
+          style={{ borderRadius: "100%", padding: "10px", backgroundColor: "#FACC15" }}
           onClick={addCart} 
         >
-          <AddIcon style={{ backgroundColor: "yellow" }} />
+          <AddIcon style={{ backgroundColor: "#FACC15" }} />
         </button>
       </div>
     </div>
