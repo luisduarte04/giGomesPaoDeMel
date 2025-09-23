@@ -1,49 +1,87 @@
-.CardPrincipal {
+.card-principal {
     margin: 40px auto;
     width: 73%;
-    height: auto;
     border-radius: 10px;
     background-color: #27272a;
     padding: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.headerPedido {
+.header-pedido {
     text-align: start;
     margin-bottom: 20px;
     color: white;
     font-size: 20px;
 }
 
-.cestaPedido {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header-pedido h2 {
+    background-color: #27272a;
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.cesta-pedido {
+    display: block;
     margin-bottom: 20px;
     color: white;
     padding: 20px;
-
+    background-color: #27272a;
 }
 
-.carrinhoPedido {
+.cesta-pedido h3 {
+    background-color: #27272a;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 12px 0;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #27272a;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+}
+
+.item-row span {
+    background-color: transparent;
+}
+
+.subtotal {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     color: white;
+    background-color: #27272a;
 }
 
-.finalizarPedido {
+.subtotal h2 {
+    background-color: #27272a;
+    margin: 0;
+}
+
+.finalizar {
     text-align: center;
-    
 }
 
-.finalizarPedido button {
-    background-color: #3f3f46;
-    color: #9ca3af;
+.finalizar button {
+    height: 60px;
+    font-size: 20px;
+    background-color: #FACC15;
+    color: #111827;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    cursor: not-allowed;
+    cursor: pointer;
     width: 100%;
+}
+
+.finalizar button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    background-color: #3f3f46;
+    color: #9ca3af;
 }
