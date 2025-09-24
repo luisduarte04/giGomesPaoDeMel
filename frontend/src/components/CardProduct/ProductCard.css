@@ -103,6 +103,7 @@
 
 .icon {
     background-color: inherit;
+    color: white;
 }
 
 .action-button:hover {
@@ -156,6 +157,7 @@
     
     .descriptionCard h1 {
         font-size: 1.2rem;
+        color: white;
     }
     
     .descriptionCard p {
