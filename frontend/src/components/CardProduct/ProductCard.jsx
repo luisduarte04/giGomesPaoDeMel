@@ -1,37 +1,27 @@
-import React, { useState } from "react";
+
 import "./ProductCard.css";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
-export default function ProductCard({name, description, price, image, addToCart, removeToCart}) {
-  const [quantidade, setQuantidade] = useState(0);
+export default function ProductCard({product, quanty, addToCart, removeToCart}) {
 
-  const handleIncrement = () => {
-    setQuantidade(prev => prev + 1);
-  };
-
-  const handleDecrement = () => {
-    setQuantidade(prev => (prev > 0 ? prev - 1 : 0));
-  };
 
   const addCart = () => {
-    handleIncrement()
     addToCart()
   }
   const removeCart = () => {
-    handleDecrement()
     removeToCart()
   }
 
   return (
     <div className="cards">
       <div style={{ backgroundColor: "#27272a" }}>
-        <img src={image} alt={`Imagem de ${name}`} />
+        <img src={product.image} alt={`Imagem de ${product.name}`} />
       </div>
       <div className="descriptionCard">
-        <h1>{name}</h1>
-        <p style={{ color: "#9CA3AF" }}>{description}</p>
-        <strong style={{ color: "#FACC15", fontSize: "20px" }}>{price}</strong>
+        <h1>{product.description}</h1>
+        <p style={{ color: "#9CA3AF" }}>{product.description}</p>
+        <strong style={{ color: "#FACC15", fontSize: "20px" }}>{product.price}</strong>
       </div>
       <div className="addAndRemove">
         <button
@@ -40,8 +30,11 @@ export default function ProductCard({name, description, price, image, addToCart,
         >
           <RemoveIcon />
         </button>
-        <p style={{ color: "white", fontSize: "30px", backgroundColor: "#27272a" }}>
-          {quantidade}
+        <p 
+          style={{ color: "white", fontSize: "30px", backgroundColor: "#27272a" }}
+          className={quanty > 0 ? "quantity-animated" : ""}
+        >
+          {quanty}
         </p>
         <button
           style={{ borderRadius: "100%", padding: "10px", backgroundColor: "#FACC15" }}

@@ -1,5 +1,30 @@
-*{
+@import './styles/variables.css';
+
+* {
   background-color: #18181b;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Melhorias gerais para toda a aplicação */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Estilos para links */
+a {
+  color: #FACC15;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #E3B715;
+  text-decoration: underline;
 }

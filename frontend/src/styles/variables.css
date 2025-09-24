@@ -1,0 +1,27 @@
+/* Sistema de Design - Variáveis Globais */
+:root {
+  /* Cores principais */
+  --primary: #FACC15;
+  --primary-hover: #E3B715;
+  --primary-active: #CCB014;
+  --dark-bg: #27272a;
+  --darker-bg: #18181b;
+  --text-light: #FFFFFF;
+  --text-muted: #9CA3AF;
+  
+  /* Border radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 100%;
+  
+  /* Transições */
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+  
+  /* Sombras */
+  --shadow-sm: rgba(219, 203, 54, 0.15) 0px 2px 4px;
+  --shadow-md: rgba(219, 203, 54, 0.2) 0px 5px 15px -3px;
+  --shadow-lg: rgba(219, 203, 54, 0.25) 0px 10px 25px -5px;
+}

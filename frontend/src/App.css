@@ -2,3 +2,32 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* Media queries para responsividade geral */
+@media screen and (max-width: 1400px) {
+    .app-container {
+        max-width: 1400px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .app-container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .app-container {
+        padding: 0 5px;
+    }
+}
+

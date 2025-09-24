@@ -16,6 +16,7 @@ export default function Header() {
             <p className="description">Produzido com amor em Embu das Artes - SP</p>
             </strong>
         </div>
+        <hr className="header-divider" />
     </header>
   )
 }

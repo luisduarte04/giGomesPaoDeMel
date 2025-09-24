@@ -1,44 +1,229 @@
 .cards{
     display: flex;
     justify-content: start;
-    margin: 50px auto;
-    gap: 30px;
+    margin: 30px auto;
+    gap: 20px;
     background-color: #27272a;
-    width: 70%;
+    width: 80%;
+    max-width: 1000px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: rgba(219, 203, 54, 0.99) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(219, 203, 54, 0.2) 0px 4px 6px -1px;
+    transition: all 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(219, 203, 54, 0.3) 0px 10px 15px -3px;
 }
 
 .cards div img{
-    border: 2px solid black;
-    height: 100px;
-    
+    border: 2px solid #1a1a1d;
+    height: 120px;
+    width: auto;
+    object-fit: cover;
     border-radius: 10%;
     background-color: #27272a;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.cards div img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .descriptionCard{
-    width: 70%;
+    flex: 1;
     background-color: #27272a;
+}
+
+.descriptionCard h1 {
+    font-size: 1.4rem;
+    background-color: #27272a;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.descriptionCard p {
+    margin-bottom: 10px;
+    background-color: #27272a;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.descriptionCard strong {
+    margin-bottom: 10px;
+    background-color: #27272a;
+    font-size: 1.25rem;
+    color: #FACC15;
+    display: block;
 }
 
 .addAndRemove{
     display: flex;
-    width: 100px;
-    gap: 20px;
+    min-width: 80px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     background-color: #27272a;
-
-    /* border: 2px solid black; */
 }
+
 .addAndRemove button{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
 }
 
-.descriptionCard h1, .descriptionCard p, .descriptionCard strong {
-    margin-bottom: 10px; 
+.addAndRemove button:hover {
+    transform: scale(1.1);
+}
+
+.addAndRemove button:active {
+    transform: scale(0.95);
+}
+
+.addAndRemove p {
+    color: white;
+    font-size: 24px;
     background-color: #27272a;
+    margin: 0;
+    transition: all 0.3s ease;
+    min-width: 36px;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.quantity-animated {
+    animation: pulse 0.3s ease-in-out;
+}
+
+/* Media queries para responsividade */
+@media screen and (max-width: 768px) {
+    .cards {
+        width: 90%;
+        padding: 15px;
+        gap: 15px;
+        margin: 20px auto;
+    }
+    
+    .cards div img {
+        height: 100px;
+        width: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .descriptionCard h1 {
+        font-size: 1.2rem;
+    }
+    
+    .descriptionCard p {
+        font-size: 0.8rem;
+    }
+    
+    .descriptionCard strong {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .addAndRemove {
+        gap: 10px;
+        min-width: 80px;
+    }
+    
+    .addAndRemove p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards {
+        flex-direction: column;
+        width: 85%;
+        padding: 15px;
+        gap: 15px;
+        margin: 20px auto;
+    }
+    
+    .cards > div:first-child {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .cards div img {
+        height: auto;
+        width: 85%;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+    
+    .cards div img:hover {
+        transform: scale(1.03);
+    }
+    
+    .descriptionCard {
+        width: 100%;
+        text-align: center;
+        padding: 0 5px;
+        margin-top: 5px;
+    }
+    
+    .descriptionCard h1 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .descriptionCard p {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+        color: #9CA3AF;
+    }
+    
+    .descriptionCard strong {
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: rgba(250, 204, 21, 0.1) !important;
+        border-radius: 20px;
+        margin: 5px 0;
+    }
+    
+    .addAndRemove {
+        width: 100%;
+        margin-top: 12px;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .addAndRemove button {
+        padding: 10px !important;
+    }
+    
+    .addAndRemove p {
+        font-size: 22px;
+        min-width: 40px;
+    }
 }
 
