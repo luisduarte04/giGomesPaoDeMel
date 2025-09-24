@@ -77,32 +77,35 @@
 
 .finalizar {
     text-align: center;
+    margin-top: 20px;
 }
 
 .finalizar button {
     height: 60px;
     font-size: 20px;
+    font-weight: 600;
     background-color: #FACC15;
     color: #111827;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     width: 100%;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .finalizar button:hover {
     background-color: #E3B715;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .finalizar button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* Efeito de ondulação ao clicar */
@@ -144,9 +147,31 @@
     opacity: 0.6;
     background-color: #3f3f46;
     color: #9ca3af;
+    box-shadow: none;
+    transform: none;
 }
 
-/* Responsividade para diferentes tamanhos de tela */
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .finalizar button {
+        height: 55px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .finalizar {
+        margin-top: 15px;
+    }
+    
+    .finalizar button {
+        height: 50px;
+        font-size: 16px;
+        padding: 8px 15px;
+        border-radius: 6px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .card-principal {
         width: 85%;

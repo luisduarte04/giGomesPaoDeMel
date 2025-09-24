@@ -7,10 +7,15 @@ import { product } from './data';
 import Footer from './components/Footer/Footer';
 import Checkout from './components/Checkout/Checkout';
 import Comprovante from './components/Comprovante/Comprovante';
+import DevFooter from './components/DevFooter/DevFooter';
 
 function App() {
   const [cart, setCart] = useState([])
   const [currentPage, setCurrentPage] = useState("home")
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [endereco, setEndereco] = useState("");
+  const [telefone, setTelefone] = useState("");
+
   const addToCart = (product) => {
     setCart([...cart, product])
   }
@@ -29,11 +34,18 @@ function App() {
 
   const goToHome = () => setCurrentPage("home")
   const goToCheckout = () => setCurrentPage("checkout")
-  const goToComprovante = () => setCurrentPage("comprovante")
+  const goToComprovante = () => setCurrentPage("comprovante");
+
+  const handleComprovante = (address, phone) => {
+    setSelectedProducts(cart);
+    setEndereco(address);
+    setTelefone(phone);
+    goToComprovante();
+  };
 
   return (
     <div className='app-container'>
-      <Header />
+      <Header home={() => goToHome()} />
       {currentPage === "home" && (
         <>
         {product.map((item) => (
@@ -50,16 +62,21 @@ function App() {
       )}
       {currentPage === "checkout" && (
         <>
-        <Checkout voltar={() => goToHome()} comprovante={() => goToComprovante()}/>
+        <Checkout voltar={() => goToHome()} comprovante={handleComprovante}/>
         </>
       )}
       {currentPage === "comprovante" && (
         <>
-        <Comprovante voltar={() => goToCheckout()}/>
+        <Comprovante 
+          voltar={() => goToCheckout()} 
+          products={selectedProducts} 
+          endereco={endereco}
+          telefone={telefone}
+        />
         </>
       )}
-
       
+      <DevFooter />
     </div>
   );
 }

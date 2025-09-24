@@ -12,7 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Media queries para responsividade geral */
 @media screen and (max-width: 1400px) {
     .app-container {
         max-width: 1400px;

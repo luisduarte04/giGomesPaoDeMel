@@ -1,0 +1,88 @@
+.dev-footer {
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #3f3f46;
+  width: 100%;
+  background-color: #18181b;
+}
+
+.dev-footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+}
+
+.dev-name {
+  font-size: 0.9rem;
+  color: #9CA3AF;
+  margin: 0;
+  background-color: transparent;
+}
+
+.dev-links {
+  display: flex;
+  gap: 15px;
+  background-color: transparent;
+}
+
+.dev-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: #27272a;
+}
+
+.dev-link i {
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.dev-link.linkedin {
+  background-color: #0A66C2;
+}
+
+.dev-link.linkedin:hover {
+  background-color: #0c5193;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dev-link.whatsapp {
+  background-color: #25D366;
+}
+
+.dev-link.whatsapp:hover {
+  background-color: #1da850;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .dev-footer {
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+  
+  .dev-name {
+    font-size: 0.8rem;
+  }
+  
+  .dev-link {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .dev-link i {
+    font-size: 16px;
+  }
+}

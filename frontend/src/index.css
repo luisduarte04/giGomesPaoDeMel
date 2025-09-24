@@ -7,17 +7,32 @@
   box-sizing: border-box;
 }
 
-/* Melhorias gerais para toda a aplicação */
 button {
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-normal);
+  font-family: 'Open Sans', sans-serif;
+  touch-action: manipulation;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 input:focus {
   outline: none;
 }
 
-/* Estilos para links */
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+  button, 
+  a.btn-whatsapp, 
+  .action-button, 
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 a {
   color: #FACC15;
   text-decoration: none;
