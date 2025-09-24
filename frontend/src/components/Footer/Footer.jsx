@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Footer.css";
 
-export default function Footer({ cart = [], onFinish }) {
+export default function Footer({ cart = [], onCheckout }) {
   const groupedCart = cart.reduce((acc, item) => {
     const existing = acc.find((p) => p.id === item.id);
     if (existing) {
@@ -52,7 +52,7 @@ export default function Footer({ cart = [], onFinish }) {
       </div>
 
       <div className='finalizar'>
-        <button disabled={groupedCart.length === 0} onClick={() => onFinish && onFinish()}>
+        <button disabled={groupedCart.length === 0} onClick={onCheckout}>
           Finalizar Pedido
         </button>
       </div>

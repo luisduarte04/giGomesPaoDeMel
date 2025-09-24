@@ -1,0 +1,165 @@
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #18181b;
+}
+
+.form-container {
+    background-color: #27272a !important;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 20px;
+    box-shadow: rgba(219, 203, 54, 0.2) 0px 4px 8px 0px;
+    transition: all 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow: rgba(219, 203, 54, 0.3) 0px 8px 16px 0px;
+    transform: translateY(-3px);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    background-color: #27272a !important;
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background-color: #27272a !important;
+    color: white;
+}
+
+.form-group input {
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #313133 !important;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.form-group input:focus {
+    outline: none;
+    background-color: #3a3a3d !important;
+    border-left: 3px solid #FACC15;
+    box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.1);
+}
+
+.form-group input::placeholder {
+    color: gray;
+    transition: opacity 0.3s ease;
+}
+
+.form-group input:focus::placeholder {
+    opacity: 0.7;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: center;
+    background-color: #27272a !important;
+}
+
+.btn-back {
+    padding: 12px 20px;
+    border: none;
+    background-color: #313133 !important;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-confirm {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FACC15 !important;
+    color: black !important;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-back:hover {
+    background-color: #3a3a3e !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-back:active {
+    transform: translateY(0);
+}
+
+.btn-confirm:hover {
+    background-color: #e6bc14 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-confirm:active {
+    transform: translateY(0);
+}
+
+/* Efeito de ondulação ao clicar nos botões */
+.btn-back::after, .btn-confirm::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn-back:focus:not(:active)::after, 
+.btn-confirm:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}

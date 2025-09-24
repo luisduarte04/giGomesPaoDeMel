@@ -1,36 +1,196 @@
 .header{
     display: flex;
     gap: 50px;
-    border: 2px solid black;
     justify-content: center;
-    height: 15rem;
+    height: auto;
+    min-height: 10rem;
+    padding: 1.5rem 1rem 2rem;
     align-items: center;
-    box-shadow: rgba(219, 203, 54, 0.99) 1.95px 1.95px 2.6px;
-    
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header div img{
     height: 150px;
+    width: 150px;
     border-radius: 100%;
-    
+    object-fit: cover;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.header div h1{
-    font-size: 42px;
+
+.header div img:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-.header div p{
-    font-size: 16px;
+
+.text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+}
+
+.header div h1{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.header div p{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 .header div h1 span.giGomes{
     color: #fff;
 }
 
-.header div h1 span.paoDeMel{
-    color: rgb(255, 255, 0);
-}
-
 .header div p.description{
     color: gray;
+}
+
+.header-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FACC15;
+    border: none;
+    margin: 0;
+    box-shadow: 0 1px 2px rgba(250, 204, 21, 0.3);
+}
+
+/* Media queries para responsividade */
+@media screen and (min-width: 1400px) {
+    .header {
+        max-width: 1400px;
+        padding: 2rem;
+    }
     
+    .header div img {
+        height: 180px;
+        width: 180px;
+    }
+    
+    .header div h1 {
+        font-size: 3rem;
+    }
+    
+    .header div p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        max-width: 90%;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        max-width: 95%;
+        gap: 35px;
+        padding: 1.3rem 1rem;
+    }
+    
+    .header div img {
+        height: 130px;
+        width: 130px;
+    }
+    
+    .header div h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        gap: 30px;
+        padding: 1.2rem 0.8rem;
+        min-height: 8rem;
+    }
+    
+    .header div img {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .header div h1 {
+        font-size: 2rem;
+    }
+    
+    .header div p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        gap: 25px;
+        padding: 1.1rem 0.7rem;
+        flex-direction: column;
+    }
+    
+    .header div img {
+        height: 110px;
+        width: 110px;
+    }
+    
+    .header div h1 {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem 0.5rem 1.5rem;
+        min-height: auto;
+    }
+    
+    .header div img {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .header div h1 {
+        font-size: 1.7rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .header div h1 span.giGomes,
+    .header div h1 span.paoDeMel {
+        display: inline;
+    }
+    
+    .header div p {
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+    
+    .header-divider {
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
 }
