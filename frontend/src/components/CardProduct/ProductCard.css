@@ -36,6 +36,7 @@
 .descriptionCard{
     flex: 1;
     background-color: #27272a;
+    color: white;
 }
 
 .descriptionCard h1 {
