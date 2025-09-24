@@ -70,7 +70,7 @@
     display: block;
 }
 
-.addAndRemove{
+.addAndRemove {
     display: flex;
     min-width: 80px;
     gap: 10px;
@@ -79,23 +79,46 @@
     background-color: #27272a;
 }
 
-.addAndRemove button{
+.action-button {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.addAndRemove button:hover {
+.remove-button {
+    background-color: #18181b;
+}
+
+.add-button {
+    background-color: #FACC15;
+}
+
+.icon {
+    background-color: inherit;
+}
+
+.action-button:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.addAndRemove button:active {
+.action-button:active {
     transform: scale(0.95);
 }
 
-.addAndRemove p {
+.add-button .icon {
+    background-color: #FACC15;
+}
+
+.quantity {
     color: white;
     font-size: 24px;
     background-color: #27272a;

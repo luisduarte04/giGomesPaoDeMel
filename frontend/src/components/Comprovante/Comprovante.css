@@ -1,0 +1,122 @@
+.itens{
+    padding: 20px;
+    border: 2px solid #e7cc5e;
+    border-radius: 8px;
+    background-color: #27272a;
+    word-break: break-word;
+    margin-top: 10px;
+}
+
+.itens p {
+    background-color: #27272a;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.subtotal-comprovante {
+  margin: 15px 0 5px;
+  padding-top: 10px;
+  border-top: 1px solid #3f3f46;
+  text-align: right;
+  font-weight: bold;
+  color: #FACC15;
+  background-color: #27272a;
+}
+
+.btn-whatsapp {
+  background-color: #25D366 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 12px 30px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: white !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da850 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  text-decoration: none !important;
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-whatsapp .bi-whatsapp {
+  background-color: transparent !important;
+  font-size: 20px !important;
+}
+
+.btn-whatsapp span {
+  background-color: transparent !important;
+}
+
+/* Media queries para responsividade */
+@media screen and (max-width: 768px) {
+  .btn-whatsapp {
+    padding: 10px 20px !important;
+    font-size: 0.95rem !important;
+  }
+  
+  .btn-whatsapp .bi-whatsapp {
+    font-size: 18px !important;
+  }
+  
+  .itens {
+    padding: 15px;
+  }
+  
+  .itens p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-back, .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn-back {
+    order: 2;
+    margin-top: 10px;
+    padding: 10px 15px !important;
+  }
+  
+  .btn-whatsapp {
+    order: 1;
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .itens {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+  
+  .itens p {
+    font-size: 0.85rem;
+  }
+  
+  .subtotal-comprovante {
+    margin: 12px 0 3px;
+    padding-top: 8px;
+    font-size: 0.95rem;
+  }
+}

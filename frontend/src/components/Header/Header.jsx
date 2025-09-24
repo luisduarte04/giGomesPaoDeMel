@@ -1,11 +1,11 @@
 import "./HeaderStyled.css"
 import logo from "../../assets/logo.png"
 
-export default function Header() {
+export default function Header({home}) {
   return (
     <header className="header">
-        <div>
-            <img src={logo} alt="Logo Pão de Mel da Gi" />
+        <div >
+            <img src={logo} alt="Logo Pão de Mel da Gi" onClick={home}/>
         </div>
         <div className="text">
             <strong>

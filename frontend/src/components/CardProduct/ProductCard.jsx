@@ -4,11 +4,10 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
 export default function ProductCard({product, quanty, addToCart, removeToCart}) {
-
-
   const addCart = () => {
     addToCart()
   }
+  
   const removeCart = () => {
     removeToCart()
   }
@@ -19,28 +18,29 @@ export default function ProductCard({product, quanty, addToCart, removeToCart}) 
         <img src={product.image} alt={`Imagem de ${product.name}`} />
       </div>
       <div className="descriptionCard">
-        <h1>{product.description}</h1>
+        <h1>{product.name}</h1>
         <p style={{ color: "#9CA3AF" }}>{product.description}</p>
-        <strong style={{ color: "#FACC15", fontSize: "20px" }}>{product.price}</strong>
+        <strong>{product.price}</strong>
       </div>
       <div className="addAndRemove">
         <button
-          style={{ borderRadius: "100%", padding: "10px", backgroundColor: "#18181b" }}
+          className="action-button remove-button"
           onClick={removeCart}
+          aria-label="Remover item"
         >
-          <RemoveIcon />
+          <RemoveIcon className="icon" />
         </button>
         <p 
-          style={{ color: "white", fontSize: "30px", backgroundColor: "#27272a" }}
-          className={quanty > 0 ? "quantity-animated" : ""}
+          className={quanty > 0 ? "quantity quantity-animated" : "quantity"}
         >
           {quanty}
         </p>
         <button
-          style={{ borderRadius: "100%", padding: "10px", backgroundColor: "#FACC15" }}
-          onClick={addCart} 
+          className="action-button add-button"
+          onClick={addCart}
+          aria-label="Adicionar item" 
         >
-          <AddIcon style={{ backgroundColor: "#FACC15" }} />
+          <AddIcon className="icon" />
         </button>
       </div>
     </div>
