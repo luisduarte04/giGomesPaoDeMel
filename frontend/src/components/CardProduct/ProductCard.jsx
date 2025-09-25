@@ -15,7 +15,7 @@ export default function ProductCard({product, quanty, addToCart, removeToCart}) 
   return (
     <div className="cards">
       <div style={{ backgroundColor: "#27272a" }}>
-        <img src={product.image} alt={`Imagem de ${product.name}`} />
+        <img src={product.image} alt={`Imagem pão de mel ${product.image}`} />
       </div>
       <div className="descriptionCard">
         <h1>{product.name}</h1>
